@@ -1,22 +1,44 @@
-# Networking
-## What is Networking?
-Networking is the process of connecting computers and devices so they can communicate and share information.
-## What is an IP Address?
+# Networking Fundamentals
+
+## What is networking?
+
+Networking is the process of connecting computers and other devices so they can communicate and share information.
+
+## IP addresses
+
 An IP address identifies a device on a network.
-Example:
-192.168.10.50
-## What is a Port?
-A port is a logical communication endpoint used by network services.
-Examples:
-- Port 22 — SSH
-- Port 80 — HTTP
-- Port 443 — HTTPS
-- Port 3389 — RDP
+
+Example: `192.168.10.50`
+
+## Ports and services
+
+A port is a logical communication endpoint used by a network service.
+
+| Port | Common service |
+|---:|---|
+| 21 | FTP |
+| 22 | SSH |
+| 80 | HTTP |
+| 443 | HTTPS |
+| 3389 | RDP |
+
+An open port normally means that a service is listening and prepared to accept network traffic. It is not automatically proof of a vulnerability.
+
 ## TCP and UDP
+
 ### TCP
-TCP is a connection-oriented protocol. It helps ensure that data is delivered reliably and in the correct order.
+
+TCP is connection-oriented. It establishes a connection before transmitting data and provides reliable, ordered delivery.
+
 ### UDP
-UDP is a connectionless protocol. It is faster than TCP but does not guarantee delivery.
-### Simple Difference
-TCP = Reliable
-UDP = Faster, but less reliable
+
+UDP is connectionless. It sends data without first establishing a connection and does not guarantee delivery or ordering.
+
+| Protocol | Connection | Delivery |
+|---|---|---|
+| TCP | Connection-oriented | Reliable and ordered |
+| UDP | Connectionless | Faster, without guaranteed delivery |
+
+## Security relevance
+
+Understanding addressing, ports, protocols, and services helps a penetration tester interpret scan results and decide what should be investigated next.
